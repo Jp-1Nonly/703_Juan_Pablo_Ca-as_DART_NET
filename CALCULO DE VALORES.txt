@@ -1,0 +1,1 @@
+realiza un algorritmo que calcule lea la cantidad de votos obetnidos por 3 cantidatos y luego calcula el total de votos y porcentaje de cada candidato
