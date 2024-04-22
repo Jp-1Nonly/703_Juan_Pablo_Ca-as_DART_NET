@@ -1,0 +1,17 @@
+// See https://aka.ms/new-console-template for more information
+/*Console.WriteLine("Calculator!");
+
+double tasaCambio = 3919.77; 
+
+Console.WriteLine("Bienvenido al convertidor de dólares a pesos colombianos");
+Console.WriteLine("Ingrese la cantidad de dólares a convertir:");
+
+
+double dolares = Convert.ToDouble(Console.ReadLine());
+
+double pesosColombianos = dolares * tasaCambio;
+
+
+Console.WriteLine($"{dolares} dólares equivalen a {pesosColombianos} pesos colombianos");
+*/
+
