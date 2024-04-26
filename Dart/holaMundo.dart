@@ -28,7 +28,7 @@ void main() {
       print('Uno de los números es positivo y el otro es negativo.');
     }
 
-    // Cálculos adicionales solicitados
+    
     int maximoValor = numero1 > numero2 ? numero1 : numero2;
     int minimoValor = numero1 < numero2 ? numero1 : numero2;
     int cantidadPositivos = (numero1 > 0 ? 1 : 0) + (numero2 > 0 ? 1 : 0);

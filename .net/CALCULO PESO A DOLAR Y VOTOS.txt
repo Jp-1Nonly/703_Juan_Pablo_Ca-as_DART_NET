@@ -13,5 +13,4 @@ double pesosColombianos = dolares * tasaCambio;
 
 
 Console.WriteLine($"{dolares} dólares equivalen a {pesosColombianos} pesos colombianos");
-*/
 
