@@ -9,7 +9,7 @@
             "name": "Dart: Run all Tests",
             "type": "dart",
             "request": "launch",
-            "program": "poo.dart",
+            "program": "Evaluacion.dart",
             "console": "terminal"
         }
     ]
