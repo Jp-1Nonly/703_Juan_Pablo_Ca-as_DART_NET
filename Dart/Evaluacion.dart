@@ -16,7 +16,8 @@ void main() {
     print("2 - Consignar dinero");
     print("3 - Transferir dinero");
     print("4 - Retirar dinero");
-    print("5 - Salir");
+    print("5 - Consultar cuenta");
+    print("6 - Salir");
 
     stdout.write("\nSeleccione una opción: ");
     int opcion = int.parse(stdin.readLineSync()!);
@@ -64,16 +65,15 @@ void main() {
           print("\nLa cuenta de destino no existe");
         } else {
           stdout.write("\nIngrese la cantidad a transferir: ");
-          double cantidadTransferir = double.parse(stdin.readLineSync()!);
-          if (cantidadTransferir > 0 &&
-              cantidadTransferir <= cuentaOrigen.saldo) {
-            cuentaOrigen.saldo -= cantidadTransferir;
-            cuentaDestino.saldo += cantidadTransferir;
+          double cantidad = double.parse(stdin.readLineSync()!);
+          if (cantidad > 0 && cantidad <= cuentaOrigen.saldo) {
+            cuentaOrigen.saldo -= cantidad;
+            cuentaDestino.saldo += cantidad;
             print("\nTransferencia realizada exitosamente");
             print("Nuevo saldo en la cuenta $numeroCuentaOrigen: ${cuentaOrigen.saldo}");
             print("Nuevo saldo en la cuenta $numeroCuentaDestino: ${cuentaDestino.saldo}");
           } else {
-            print("\nLa cantidad a transferir es invalida");
+            print("\nLa cantidad a transferir es inválida o excede el saldo de la cuenta origen");
           }
         }
       }
@@ -97,10 +97,22 @@ void main() {
         }
       }
     } else if (opcion == 5) {
+      stdout.write("\nIngrese el número de cuenta a consultar: ");
+      String numeroCuenta = stdin.readLineSync()!;
+      var cuenta = cuentas.firstWhere(
+          (cuenta) => cuenta.numeroCuenta == numeroCuenta,
+          orElse: () => Cuenta("", 0));
+      if (cuenta.numeroCuenta.isEmpty) {
+        print("\nLa cuenta no existe.");
+      } else {
+        print("\nNúmero de cuenta: ${cuenta.numeroCuenta}");
+        print("Saldo de la cuenta: ${cuenta.saldo}");
+      }
+    } else if (opcion == 6) {
       print("\nFin del programa");
       break;
     } else {
-      print("\nopcion no valida");
+      print("\nOpción no válida");
     }
   }
 }
