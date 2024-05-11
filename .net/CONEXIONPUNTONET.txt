@@ -1,0 +1,1 @@
+dodnet add package Pomelo.EntityFrameworkCore.Mysql
