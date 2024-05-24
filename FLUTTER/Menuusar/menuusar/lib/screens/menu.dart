@@ -5,7 +5,7 @@ import 'package:menuusar/screens/calculadora.dart';
 import 'package:menuusar/screens/mision.dart';
 import 'package:menuusar/screens/productos.dart';
 import 'package:menuusar/screens/rectangulo.dart';
-import 'package:menuusar/screens/vision.dart';
+import 'package:menuusar/screens/menuuse.dart';
 
 class Menu extends StatefulWidget {
   const Menu({super.key});
@@ -37,11 +37,11 @@ class _MenuState extends State<Menu> {
           ),
            ListTile(
             leading: const Icon(Icons.access_alarm_outlined),
-            title: const Text("Vision"),
+            title: const Text("PRUEBA ESTE MENU"),
             trailing: const Icon(Icons.navigate_next_rounded),
             onTap: () {
               final route =
-                  MaterialPageRoute(builder: (context) => const Vision());
+                  MaterialPageRoute(builder: (context) => const Menuuse());
               Navigator.push(context, route);
             },
           ),

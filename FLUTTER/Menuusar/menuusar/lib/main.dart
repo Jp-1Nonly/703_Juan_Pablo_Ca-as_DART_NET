@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:menuusar/screens/menu.dart';
+import 'package:menuusar/screens/menuuse.dart';
 
 void main() {
   runApp(const App());
@@ -17,7 +17,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Menu(),
+      home: Menuuse(),
     );
   }
 }
